@@ -1,11 +1,9 @@
 # Trabalho-Final-React-Native
-
-# Trab_Final_FrontG4
-Trabalho final de front End
+Trabalho Final de ReactNative
 # 
 
 <div>
-<img align="middle" alt="mobile" style="border-radius:50px;" src="![image](https://blog.vertexplus.com/wp-content/uploads/2020/02/cross-platform-mobile-app-development-1.jpg)?width=832&height=466"></a>
+<img align="middle" alt="g4bank-pic" style="border-radius:50px;" src="https://www.mxcursos.com/blog/wp-content/uploads/2017/04/front-end-ou-back-end-entenda-as-diferencas-e-descubra-o-seu-perfil.png?width=832&height=466"></a>
 </div>
 
 ![Badge em Desenvolvimento](https://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
