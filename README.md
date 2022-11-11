@@ -37,7 +37,7 @@ O projeto está desenvolvido utilizando as seguintes tecnologias:
 
 * ***Yuri Ramos de Oliveira*** - *Desenvolvimento do código* - [Yuri-Ramos](https://github.com/Yuri-Ramos)
  
-* ***Kaun ***  - *Desenvolvimento do código* - [Graziela Falk](https://github.com/KauanOliveira1)
+* ***Kaun***  - *Desenvolvimento do código* - [Graziela Falk](https://github.com/KauanOliveira1)
 
 * ***Quezia menezes***  - *Desenvolvimento do código* - [Quezia menezes](https://github.com/QueziaMenezes)
 
