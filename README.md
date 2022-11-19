@@ -1,3 +1,5 @@
+
+=======
 # Trabalho-Final-React-Native
 Trabalho Final de ReactNative
 # 
@@ -48,3 +50,4 @@ O projeto está desenvolvido utilizando as seguintes tecnologias:
 <div>
 
 </div>
+
