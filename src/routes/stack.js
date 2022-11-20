@@ -17,7 +17,7 @@ export function StackRoutes() {
       screenOptions={{
         headerShow: false,
       }}
-      
+      >
       <Stack.Screen name="Cart" component={Cart}/>
       <Stack.Screen name="Splash" component={Splash}/>
       <Stack.Screen name="Login" component={Login}/>
