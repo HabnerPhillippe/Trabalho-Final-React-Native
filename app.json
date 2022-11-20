@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "crud",
-    "slug": "crud",
+    "name": "nativefinal",
+    "slug": "nativefinal",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
