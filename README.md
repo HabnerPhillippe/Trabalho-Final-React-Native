@@ -39,13 +39,13 @@ O projeto está desenvolvido utilizando as seguintes tecnologias:
 
 * ***Yuri Ramos de Oliveira*** - *Desenvolvimento do código* - [Yuri-Ramos](https://github.com/Yuri-Ramos)
  
-* ***Kaun***  - *Desenvolvimento do código* - [Graziela Falk](https://github.com/KauanOliveira1)
+* ***Kauan***  - *Desenvolvimento do código* - [Kauan Oliveira](https://github.com/KauanOliveira1)
 
-* ***Quezia menezes***  - *Desenvolvimento do código* - [Quezia menezes](https://github.com/QueziaMenezes)
+* ***Quezia Menezes***  - *Desenvolvimento do código* - [Quezia Menezes](https://github.com/QueziaMenezes)
 
 * ***Habner*** - *Desenvolvimento do código* -  [Habner](https://github.com/HabnerPhillippe)
 
-* ***Bruna Ferreira*** - *Desenvolvimento do código* -  [Gabriel Mendes](https://github.com/Bruna3221)
+* ***Bruna Ferreira*** - *Desenvolvimento do código* -  [Bruna Ferreira](https://github.com/Bruna3221)
 
 <div>
 
