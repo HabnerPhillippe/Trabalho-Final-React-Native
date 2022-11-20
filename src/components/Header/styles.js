@@ -28,6 +28,6 @@ export const Title = styled.Text`
 `;
 
 export const Logo = styled.Image`
-  width: 100px;
-  height: 50px;
+  width: 81;
+  height: 81;
 `;

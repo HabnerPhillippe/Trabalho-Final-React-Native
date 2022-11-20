@@ -18,9 +18,9 @@ export function StackRoutes() {
         headerShow: false,
       }}
       >
+      <Stack.Screen name="Login" component={Login}/>
       <Stack.Screen name="Cart" component={Cart}/>
       <Stack.Screen name="Splash" component={Splash}/>
-      <Stack.Screen name="Login" component={Login}/>
       <Stack.Screen name="Home" component={Home}/>
       <Stack.Screen name="Product" component={ProductPage}/>
       <Stack.Screen name="Categories" component={Categories} />
