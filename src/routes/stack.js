@@ -4,7 +4,7 @@ import { CategoryRegister } from "../screens/CategoryRegister/index.js";
 import { EditCategory } from "../screens/EditCategory/index.js";
 import { Splash } from "../screens/Splash/index.js";
 import { Login } from "../screens/Login/index.js";
-import { Home } from "../screens/Home/index";
+import { Home } from "../screens/Home/index"
 import { Cart } from "../screens/Cart/index"
 import { ProductPage } from "../screens/ProductPage/index"
 
