@@ -5,5 +5,4 @@ export const MainContainer = styled.View`
   flex: 1;
   background-size: cover;
   align-items: center;
-  background-color: ${colors.primary};
 `;
