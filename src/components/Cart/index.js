@@ -59,7 +59,7 @@ export const Carrinho = () => {
                        
                       </Button>
                       <Button  onClick={() => removeItemCart(produto.id)}>
-                        
+
                       </Button>
                     </View>
                   </View>

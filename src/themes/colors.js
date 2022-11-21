@@ -1,7 +1,5 @@
 export default {
-    primary: "#00f",
+    primary: "#00ff",
     secondary: "#dd2",
-    tertiary: "#000",
-    imageColor: "#fff",
-    buttomColor: "#0ff",
+    buttomColor: "#000",
 }
