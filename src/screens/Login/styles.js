@@ -1,60 +1,71 @@
-import { StyleSheet } from 'react-native'
+import styled from "styled-components/native";
 
-export const style = StyleSheet.create({
-    logo:{
-        height: 327,
-        left: 53,
-        position: "absolute",
-        top: 83,
-        width: 324,
-    },
+export const Logo = styled.Image`
+    height: 327px;
+    left: 53px;
+    position: absolute;
+    top: 83px;
+    width: 324px;
+`;
 
-    emailLine:{
-        borderWidth: 0,
-        color: "#835757",
-        left: 65,
-        padding: 15,
-        position: "absolute",
-        top: 369,
-        width: 300,
-    },
+export const EmailInput = styled.TextInput`
+    border: 1px solid #835757;
+    height: 50px;
+    left: 55px;
+    opacity: 0.5;
+    position: absolute;
+    top: 399px;
+    width: 300px;
+`;
     
-    passLine:{
-        border: 0,
-        color: "#835757",
-        left: 65,
-        padding: 15,
-        position: "absolute",
-        top: 439,
-        width: 300,
-    },
+export const PassInput = styled.TextInput`
+    border: 1px solid #835757;
+    height: 50px;
+    left: 55px;
+    opacity: 0.5;
+    position: absolute;
+    top: 469px;
+    width: 300px;
+`;
+    
+export const ForgotPass = styled.Text`
+    color: #000;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300px;
+    left: 253px;
+    letter-spacing: 0.05px;
+    line-height: 16px;
+    position: absolute;
+    top: 525px;
+    width: 133px;
+`;
 
-    forgotPass:{
-        color: "#000",
-        fontFamily: "Inter",
-        fontSize: 13,
-        fontStyle: "normal",
-        fontWeight: 300,
-        height: 19,
-        left: 233,
-        letterSpacing: 0.05,
-        lineHeight: 16,
-        position: "absolute",
-        top: 521,
-        width: 133,
-    },
+export const LoginButton = styled.TouchableOpacity`
+    background: #2F1313;
+    border: 1px solid #FF0000;
+    box-sizing: border-box;
+    border-radius: 3px;
+    height: 45px;
+    left: 100px;
+    opacity: 0.5;
+    position: absolute;
+    top: 610px;
+    width: 200px;
+`;
 
-    loginClick:{
-        border: 1,
-        borderRadius: 3,
-        color: "#2F1313",
-        height: 45,
-        left: 115,
-        opacity: 0.5,
-        position: "absolute",
-        top: 610,
-        width: 200,
-
-    }
-
-});
+export const TextButton = styled.Text`
+    color: #ffff;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    height: 19px;
+    left: 50px;
+    letter-spacing: 0.05em;
+    line-height: 24px;
+    position: absolute;
+    top: 10px;
+    width: 92px;
+`;
