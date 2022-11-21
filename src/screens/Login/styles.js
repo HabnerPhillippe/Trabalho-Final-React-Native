@@ -1,58 +1,73 @@
 import styled from "styled-components/native";
 
-export const Logo = styled.Image`
-    height: 327px;
-    left: 53px;
+export const ContainerLogin = styled.View`
+  height:100%;
+  width:100%;
+`;
+
+export const TouchablePass = styled.TouchableOpacity`
     position: absolute;
-    top: 83px;
-    width: 324px;
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    
+`;
+
+export const Logo = styled.Image`
+    height: 45%;
+    position: absolute;
+    bottom: 20rem;
+    width: 45% ; 
+    align-self: center;
 `;
 
 export const EmailInput = styled.TextInput`
-    border: 1px solid #835757;
-    height: 50px;
-    left: 55px;
-    opacity: 0.5;
+    border: 1px solid #000000;
+    height: 3rem;
+    opacity: 0.9;
     position: absolute;
-    top: 399px;
-    width: 300px;
+    bottom: 16rem;
+    width: 85%;
+    align-self: center;
 `;
     
 export const PassInput = styled.TextInput`
-    border: 1px solid #835757;
-    height: 50px;
-    left: 55px;
-    opacity: 0.5;
+    border: 1px solid #000000;
+    height: 3rem;
+    opacity: 1.9;
     position: absolute;
-    top: 469px;
-    width: 300px;
+    bottom: 12rem;
+    width: 85%;
+    align-self: center;
 `;
     
 export const ForgotPass = styled.Text`
-    color: #000;
+    color: #ffffff;
     font-family: Inter;
     font-size: 13px;
     font-style: normal;
     font-weight: 300px;
-    left: 253px;
     letter-spacing: 0.05px;
     line-height: 16px;
     position: absolute;
-    top: 525px;
-    width: 133px;
+    bottom: 10rem;
+    align-self: center;
+    right: 40px;
 `;
+
+
 
 export const LoginButton = styled.TouchableOpacity`
     background: #2F1313;
     border: 1px solid #FF0000;
     box-sizing: border-box;
     border-radius: 3px;
-    height: 45px;
-    left: 100px;
+    height: 3rem;
     opacity: 0.5;
     position: absolute;
-    top: 610px;
-    width: 200px;
+    bottom: 5rem;
+    width: 12rem;
+    align-self: center;
 `;
 
 export const TextButton = styled.Text`
@@ -68,4 +83,5 @@ export const TextButton = styled.Text`
     position: absolute;
     top: 10px;
     width: 92px;
+    align-self: center;
 `;

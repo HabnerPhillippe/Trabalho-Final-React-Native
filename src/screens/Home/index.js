@@ -21,7 +21,7 @@ export const Home = ()=> {
 
       const getProdutos= async () => {
         const { data } = await Api.get("/produto");
-        setCategory(data);
+        setProduct(data);
       };
     
       function goBack() {
@@ -30,6 +30,7 @@ export const Home = ()=> {
 
   return (
     <MainContainer>
+      console.log(product);
       <Header title={"produtos"} iconName={"arrow-back"} goBack={goBack} />
       <PlusButton onPress={() => navigation.navigate("CategoryRegister")} />
       <FlatList
