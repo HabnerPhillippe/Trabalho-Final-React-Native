@@ -28,24 +28,21 @@ export const Login = () => {
       <Gradient />
       <Logo source={logo} />
       <EmailInput
-        value={user.email}
         onChangeText={setUser}
         placeholder={"E-mail"}
-        placeholderposition={"center"}
-        placeholderTextColor={"gray"}
+        style={{textAlign: "center", color: "white", borderBottom: "1px solid #000000"}}
       ></EmailInput>
       <PassInput
-        value={user.pass}
         onChangeText={setUser}
         placeholder={"Senha"}
-        placeholderposition={"center"}
-        placeholderTextColor={"#00000"}
+        style={{textAlign: "center", color: "white", borderBottom: "1px solid #000000"}}    
       ></PassInput>
       <TouchablePass>
-        <ForgotPass>Esqueceu a senha?</ForgotPass>
+      <MaterialIcons name="email" size={24} color="black" />
+        <ForgotPass onPress={()=>navigation.navigate("ForgotPass")}>Esqueceu a senha?</ForgotPass>
       </TouchablePass>
       <LoginButton onPress={() => navigation.navigate("Home")}>
-        <LoginText> Entrar </LoginText>
+        <LoginText>LOGIN</LoginText>
       </LoginButton>
     </ContainerLogin>
   );

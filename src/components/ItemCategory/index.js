@@ -32,7 +32,7 @@ export const ItemCategory = ({ name, photo }) => {
         <Name>{name}</Name>
       </TextContainer>
       <ButtonsContainer>
-        <CustomButton onPress={() => deleteItem(id)}>
+        <CustomButton onPress={() => navigation.navigate("Product")}>
           <FontAwesome5 name="trash" size={20} color={colors.primary} />
         </CustomButton>
         <CustomButton onPress={() => editItem(id)}> 

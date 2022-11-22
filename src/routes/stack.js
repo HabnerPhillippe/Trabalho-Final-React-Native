@@ -7,6 +7,7 @@ import { Login } from "../screens/Login/index.js";
 import { Home } from "../screens/Home/index"
 import { Cart } from "../screens/Cart/index"
 import { ProductPage } from "../screens/ProductPage/index"
+import { ForgotPass } from "../screens/ForgotPass/index";
 
 
 const Stack = createStackNavigator();
@@ -15,11 +16,13 @@ export function StackRoutes() {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShow: false,
+        headerTitle:'Teste',
+        headerShow:false,
       }}
       >
-      <Stack.Screen name="Login" component={Login}/>
+      <Stack.Screen name="Login"  component={Login}/>
       <Stack.Screen name="Splash" component={Splash}/>
+      <Stack.Screen name= "ForgotPass" component={ForgotPass}/>
       <Stack.Screen name="Cart" component={Cart}/>
       <Stack.Screen name="Home" component={Home}/>
       <Stack.Screen name="Product" component={ProductPage}/>

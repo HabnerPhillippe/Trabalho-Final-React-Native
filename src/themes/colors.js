@@ -1,5 +1,5 @@
 export default {
-    primary: "#00ff",
-    secondary: "#dd2",
+    primary: "#000000",
+    secondary: "red",
     buttomColor: "#000",
 }
