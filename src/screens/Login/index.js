@@ -1,20 +1,18 @@
-import { SafeAreaView, TouchableOpacity } from "react-native";
 import {
+  ContainerLogin,
   EmailInput,
   ForgotPass,
   LoginButton,
+  LoginText,
   Logo,
   PassInput,
-  TextButton,
-  ContainerLogin,
   TouchablePass,
-  LoginText,
 } from "./styles";
 import { Gradient } from "../../components/Gradient";
 import logo from "../../../assets/logo.png";
+import { MaterialIcons } from "@expo/vector-icons";
 import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { MaterialIcons } from "@expo/vector-icons";
 
 export const Login = () => {
   const [user, setUser] = useState({

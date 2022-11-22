@@ -1,14 +1,13 @@
-import { Categories } from "../screens/Categories/index.js";
+import { Cart } from "../screens/Cart/index"
 import { createStackNavigator } from "@react-navigation/stack";
+import { Categories } from "../screens/Categories/index.js";
 import { CategoryRegister } from "../screens/CategoryRegister/index.js";
 import { EditCategory } from "../screens/EditCategory/index.js";
-import { Splash } from "../screens/Splash/index.js";
-import { Login } from "../screens/Login/index.js";
-import { Home } from "../screens/Home/index"
-import { Cart } from "../screens/Cart/index"
-import { ProductPage } from "../screens/ProductPage/index"
 import { ForgotPass } from "../screens/ForgotPass/index";
-
+import { Home } from "../screens/Home/index"
+import { Login } from "../screens/Login/index.js";
+import { ProductPage } from "../screens/ProductPage/index"
+import { Splash } from "../screens/Splash/index.js";
 
 const Stack = createStackNavigator();
 
@@ -20,9 +19,9 @@ export function StackRoutes() {
         headerShow:false,
       }}
       >
-      <Stack.Screen name="Login"  component={Login}/>
       <Stack.Screen name="Splash" component={Splash}/>
-      <Stack.Screen name= "ForgotPass" component={ForgotPass}/>
+      <Stack.Screen name="Login"  component={Login}/>
+      <Stack.Screen name="ForgotPass" component={ForgotPass}/>
       <Stack.Screen name="Cart" component={Cart}/>
       <Stack.Screen name="Home" component={Home}/>
       <Stack.Screen name="Product" component={ProductPage}/>
