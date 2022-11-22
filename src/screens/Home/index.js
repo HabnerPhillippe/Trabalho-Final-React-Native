@@ -30,12 +30,13 @@ export const Home = ()=> {
 
   return (
     <MainContainer>
-      <Header title={"produtos"} iconName={"arrow-back"} goBack={goBack} />
-      <PlusButton onPress={() => navigation.navigate("CategoryRegister")} />
+      <Header title={"Mais Vendidos!"} iconName={"arrow-back"} goBack={goBack} />
+      {/* <PlusButton onPress={() => navigation.navigate("CategoryRegister")} /> */}
       <FlatList
         data={product}
         keyExtractor={(item) => item.id}
         renderItem={renderItem}
+        numColumns={2}
       />
     </MainContainer>
   )

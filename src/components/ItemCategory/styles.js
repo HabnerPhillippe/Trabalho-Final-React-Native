@@ -3,11 +3,10 @@ import colors from "../../themes/colors.js";
 
 export const Card = styled.View`
   flex-direction: row;
-  background-color: ${colors.secondary};
-  width: 330px;
+  //background-color: ${colors.secondary};
+  width: 180px;
   height: 160px;
-  border-radius: 20px;
-  border: 3px solid ${colors.tertiary};
+  //border: 1px solid ${colors.tertiary};
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
@@ -15,18 +14,15 @@ export const Card = styled.View`
 
 export const Photo = styled.Image`
   width: 100px;
-  height: 120px;
-  border-radius: 20px;
-  margin-left: 15px;
-  border: 3px solid ${colors.primary};
+  height: 70px;
+  margin: 0px 0px 70px 30px;
+  border: 1px solid ${colors.primary};
 `;
 
 export const TextContainer = styled.View`
-  width: 170px;
-  margin-left: 15px;
+  width: 70px;
   position: absolute;
-  top: 20px;
-  left: 120px;
+  margin: 60px 60px 20px;
 `;
 
 export const Name = styled.Text`
@@ -39,10 +35,13 @@ export const Name = styled.Text`
 export const ButtonsContainer = styled.View`
     flex-direction: row;
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 10px;
+    right: 50px;
 `;
 
 export const CustomButton = styled.TouchableOpacity`
   margin: 0 10px 0;
+`;
+
+export const Valor = styled.Text`
 `;
