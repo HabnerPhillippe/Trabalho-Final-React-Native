@@ -25,6 +25,7 @@ export const Title = styled.Text`
   font-weight: bold;
   font-size: 24px;
   text-align: center;
+  border-bottom-width:2px;
 `;
 
 export const Logo = styled.Image`
