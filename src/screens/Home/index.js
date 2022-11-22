@@ -6,31 +6,33 @@ import { Api } from "../../services";
 import { FlatList } from "react-native";
 import { ItemCategory } from "../../components/ItemCategory/index.js";
 import { useState, useEffect } from "react";
+import { Gradient } from "../../components/Gradient/index.js";
 
-export const Home = ()=> {
-    const navigation = useNavigation();
-    const [product, setProduct] = useState([]);
+export const Home = () => {
+  const navigation = useNavigation();
+  const [product, setProduct] = useState([]);
 
-    const renderItem = ({ item }) => (
-        <ItemCategory name={item.nome} photo={item.foto} />
-      );
+  const renderItem = ({ item }) => (
+    <ItemCategory name={item.nome} photo={item.foto} />
+  );
 
-      useEffect(() => {
-        getProdutos();
-      }, [product]);
+  useEffect(() => {
+    getProdutos();
+  }, [product]);
 
-      const getProdutos= async () => {
-        const { data } = await Api.get("/produto");
-        setProduct(data);
-      };
-    
-      function goBack() {
-        navigation.goBack();
-      };
+  const getProdutos = async () => {
+    const { data } = await Api.get("/produto");
+    setProduct(data);
+  };
+
+  function goBack() {
+    navigation.goBack();
+  }
 
   return (
     <MainContainer>
-      <Header title={"Mais Vendidos!"} iconName={"arrow-back"} goBack={goBack} />
+      <Header title={"Mais vendidos !"} />
+
       {/* <PlusButton onPress={() => navigation.navigate("CategoryRegister")} /> */}
       <FlatList
         data={product}
@@ -39,5 +41,5 @@ export const Home = ()=> {
         numColumns={2}
       />
     </MainContainer>
-  )
-}
+  );
+};
