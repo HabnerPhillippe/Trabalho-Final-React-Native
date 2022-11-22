@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { Api } from "../../services/index.js";
 import colors from "../../themes/colors";
-import { Card, Photo, TextContainer, Name, CustomButton, ButtonsContainer } from "./styles";
+import { Card, Photo, TextContainer, Name, CustomButton, ButtonsContainer, ComprarButton, ComprarText } from "./styles";
 import { IdContext } from "../../context/index.js";
 
 export const ItemCategory = ({ name, photo }) => {
@@ -28,6 +28,9 @@ export const ItemCategory = ({ name, photo }) => {
   return (
     <Card>
       <Photo source={{ uri: photo }} />
+      <ComprarButton onPress={() => navigation.navigate("Product")}>
+        <ComprarText>COMPRAR</ComprarText>
+      </ComprarButton>
       <TextContainer>
         <Name>{name}</Name>
       </TextContainer>

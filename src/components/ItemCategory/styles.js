@@ -5,7 +5,7 @@ export const Card = styled.View`
   flex-direction: row;
   //background-color: ${colors.secondary};
   width: 180px;
-  height: 160px;
+  height: 250px;
   //border: 1px solid ${colors.tertiary};
   justify-content: space-between;
   align-items: center;
@@ -13,16 +13,17 @@ export const Card = styled.View`
 `;
 
 export const Photo = styled.Image`
-  width: 100px;
-  height: 70px;
-  margin: 0px 0px 70px 30px;
+  width: 130px;
+  height: 90px;
+  margin: 0px 0px 160px 30px;
   border: 1px solid ${colors.primary};
 `;
 
 export const TextContainer = styled.View`
   width: 70px;
   position: absolute;
-  margin: 60px 60px 20px;
+  bottom: 130px;
+  left: 70px;
 `;
 
 export const Name = styled.Text`
@@ -35,7 +36,7 @@ export const Name = styled.Text`
 export const ButtonsContainer = styled.View`
     flex-direction: row;
     position: absolute;
-    bottom: 10px;
+    bottom: 30px;
     right: 50px;
 `;
 
@@ -44,4 +45,32 @@ export const CustomButton = styled.TouchableOpacity`
 `;
 
 export const Valor = styled.Text`
+`;
+
+export const ComprarButton = styled.TouchableOpacity`
+  background: #2f1313;
+  border: 1px solid #ff0000;
+  box-sizing: border-box;
+  border-radius: 3px;
+  opacity: 0.5;
+  position: absolute;
+  bottom: 6rem;
+  width: 6rem;
+  height: 2rem;
+  align-self: center;
+  left: 45px;
+`;
+
+export const ComprarText = styled.Text`
+  color: #fff;
+  font-family: Sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  align-self: center;
+  top: auto;
+  bottom: 5px;
+  letter-spacing: 0.05em;
+  line-height: 24px;
+  position: absolute;
+  
 `;
