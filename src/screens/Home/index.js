@@ -30,7 +30,6 @@ export const Home = ()=> {
 
   return (
     <MainContainer>
-      console.log(product);
       <Header title={"produtos"} iconName={"arrow-back"} goBack={goBack} />
       <PlusButton onPress={() => navigation.navigate("CategoryRegister")} />
       <FlatList

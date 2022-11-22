@@ -7,9 +7,9 @@ export const ContainerLogin = styled.View`
 
 export const TouchablePass = styled.TouchableOpacity`
   position: absolute;
-  align-self: center;
-  width: 100%;
+    width: 40%;
   height: 100%;
+  left: 60%;
 `;
 
 export const Logo = styled.Image`
@@ -21,7 +21,6 @@ export const Logo = styled.Image`
 `;
 
 export const EmailInput = styled.TextInput`
-  border: 1px solid #000000;
   height: 3rem;
   opacity: 0.9;
   position: absolute;
@@ -31,7 +30,7 @@ export const EmailInput = styled.TextInput`
 `;
 
 export const PassInput = styled.TextInput`
-  border: 1px solid #000000;
+  
   height: 3rem;
   opacity: 1.9;
   position: absolute;
@@ -50,7 +49,7 @@ export const ForgotPass = styled.Text`
   line-height: 16px;
   position: absolute;
   bottom: 10rem;
-  align-self: center;
+  
   right: 40px;
 `;
 
@@ -84,15 +83,14 @@ export const TextButton = styled.Text`
 `;
 export const LoginText = styled.Text`
   color: #ffff;
-  font-family: Inter;
-  font-size: 25px;
+  font-family: Sans-serif;
+  font-size: 20px;
   font-style: normal;
-  font-weight: 700;
-  height: 50px;
-  left: 50px;
+  font-weight: 500;
+  align-self: center;
+  top:10px;
   letter-spacing: 0.05em;
   line-height: 24px;
   position: absolute;
-  top: 10px;
-  width: 92px;
+  
 `;

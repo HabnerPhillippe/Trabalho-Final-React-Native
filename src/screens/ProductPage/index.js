@@ -1,11 +1,12 @@
-import { View, FlatList } from "react-native";
-import React, {useState,useParams,useEffect} from "react";
+import { Image, View } from "react-native";
+import React, {useState,useEffect} from "react";
 import { Api } from "../../services/index.js";
 import { CartContext } from "../../context/Cart.js"
+import { Container } from "./styles.js";
 
-export const ProductPage = () => {
+export const ProductPage = ({id}) => {
   const [product, setProduct] = useState([]);
-  const { id } = useParams();
+ 
   
 
   useEffect(() => {
@@ -18,12 +19,16 @@ export const ProductPage = () => {
   };
 
   return (
-    <View>
-      <FlatList
-        data={category}
-        keyExtractor={(item) => item.id}
-        renderItem={renderItem}
-      />
-    </View>
+    <Container>
+        {product?.map((produto) => {
+              return (
+                <View key={produto.id}>
+                <Image source={{uri:produto.foto}}/>
+                <View>{produto.nome}</View>
+                <View>R$ {produto.preco}</View>  
+                </View>
+              );
+        })}
+      </Container>
   );
 };
