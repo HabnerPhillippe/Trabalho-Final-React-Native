@@ -1,4 +1,4 @@
-import { SafeAreaView, TouchableOpacity} from "react-native";
+import { SafeAreaView, TouchableOpacity } from "react-native";
 import {
   EmailInput,
   ForgotPass,
@@ -8,14 +8,13 @@ import {
   TextButton,
   ContainerLogin,
   TouchablePass,
+  LoginText,
 } from "./styles";
 import { Gradient } from "../../components/Gradient";
 import logo from "../../../assets/logo.png";
 import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { MaterialIcons } from '@expo/vector-icons'; 
-
-
+import { MaterialIcons } from "@expo/vector-icons";
 
 export const Login = () => {
   const [user, setUser] = useState({
@@ -34,8 +33,7 @@ export const Login = () => {
         placeholder={"E-mail"}
         placeholderposition={"center"}
         placeholderTextColor={"gray"}
-      >
-      </EmailInput>
+      ></EmailInput>
       <PassInput
         value={user.pass}
         onChangeText={setUser}
@@ -46,8 +44,8 @@ export const Login = () => {
       <TouchablePass>
         <ForgotPass>Esqueceu a senha?</ForgotPass>
       </TouchablePass>
-      <LoginButton>
-        <TextButton>ENTRAR</TextButton>
+      <LoginButton onPress={() => navigation.navigate("Home")}>
+        <LoginText> Entrar </LoginText>
       </LoginButton>
     </ContainerLogin>
   );
