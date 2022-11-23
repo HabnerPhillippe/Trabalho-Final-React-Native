@@ -1,8 +1,8 @@
-import { Image, View } from "react-native";
-import React, {useState,useEffect} from "react";
 import { Api } from "../../services/index.js";
 import { CartContext } from "../../context/Cart.js"
 import { Container } from "./styles.js";
+import { Image, View } from "react-native";
+import React, {useState,useEffect} from "react";
 
 export const ProductPage = ({id}) => {
   const [product, setProduct] = useState([]);

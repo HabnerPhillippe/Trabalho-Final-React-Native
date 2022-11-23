@@ -40,7 +40,7 @@ export const Login = () => {
         <ForgotPass onPress={()=>navigation.navigate("ForgotPass")}>Esqueceu a senha?</ForgotPass>
       </TouchablePass>
       <LoginButton onPress={() => navigation.navigate("Home")}>
-        <LoginText>LOGIN</LoginText>
+        <LoginText>ENTRAR</LoginText>
       </LoginButton>
     </ContainerLogin>
   );

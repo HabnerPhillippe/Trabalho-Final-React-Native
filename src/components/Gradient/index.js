@@ -3,14 +3,15 @@ import { LinearGradient } from "expo-linear-gradient";
 export const Gradient = () => {
     return (
         <LinearGradient
-            colors={['#000000', '#ff0000', '#ff0000', '#000000']}
+            colors={['rgba(44, 0, 0, 1)', 'rgba(199, 48, 0, 1)', 'rgba(111, 0, 0, 0.56)', 'transparent']}
             style={{
-                position: 'absolute',
-                justifyContent: 'center',
                 alignItems: 'center',
+                mixBlendMode: "hardLight",
                 height: '100%',
-                width: '100%',
+                justifyContent: 'center',
+                position: 'absolute',
                 top: 0,
+                width: '100%',
                 zIndex: -1,
             }}
         />

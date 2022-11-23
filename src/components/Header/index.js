@@ -12,7 +12,7 @@ export const Header = ({ title, goBack, iconName }) => {
       <TitleContainer>
         <Title>{title}</Title>
       </TitleContainer>
-      <Logo source={require("../../../assets/mini.png")} />
+      <Logo source={require("../../../assets/logo.png")} />
     </Container>
   );
 };

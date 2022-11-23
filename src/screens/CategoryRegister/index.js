@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { MainContainer } from "../../components/MainContainer/styles.js";
-import { Header } from "../../components/Header/index.js";
-import {EditInput } from "../../components/EditInput/index.js";
-import { MainButton, ButtonText } from "../../components/MainButton/styles.js";
-import { ImgButton } from "../../components/ImgButton/index.js";
 import { Api } from "../../services/index.js";
+import {EditInput } from "../../components/EditInput/index.js";
+import { Header } from "../../components/Header/index.js";
+import { ImgButton } from "../../components/ImgButton/index.js";
+import { MainButton, ButtonText } from "../../components/MainButton/styles.js";
+import { MainContainer } from "../../components/MainContainer/styles.js";
+import { useState } from "react";
 
 export const CategoryRegister = ({navigation}) => {
     const [name, setName] = useState("");

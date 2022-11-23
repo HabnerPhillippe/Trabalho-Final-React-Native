@@ -1,5 +1,5 @@
-import { useContext, useEffect } from "react";
 import { Header } from "react-navigation-stack";
+import { useContext, useEffect } from "react";
 
 
 export const EditCategory = ({ navigation }) => {

@@ -1,7 +1,7 @@
-import { View, Text } from 'react-native'
-import React, { useState } from "react"
-import { EmailInput} from "./styles"
-import { useNavigation } from "@react-navigation/native"
+import { EmailInput} from "./styles";
+import React, { useState } from "react";
+import { Text, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 export const ForgotPass=()=> {
     const [email, setEmail] = useState("");
