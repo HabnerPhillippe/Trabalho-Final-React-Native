@@ -1,11 +1,14 @@
 import React,{useContext} from "react";
-import { Text, View } from "react-native";
+import { Text, View,Image } from "react-native";
 import { MainContainer } from "../../components/MainContainer/styles.js";
 import { useNavigation } from "@react-navigation/native";
 import { FlatList } from "react-native-gesture-handler";
 import { CartContext } from "../../context/Cart";
 import { Button } from "react-native-paper";
 import { Header } from "../../components/Header/index.js";
+import { TouchableOpacity } from "react-native-web";
+import { Entypo, FontAwesome5, AntDesign  } from '@expo/vector-icons'; 
+
 
 export const Cart = (props) => {
   const navigation = useNavigation();
@@ -31,17 +34,18 @@ export const Cart = (props) => {
           <View >
             {product.length === 0 && <Text>não há itens no carrinho</Text>}
 
-               {product.length !== 0 && <Button 
-                onClick={() => clearCart()}>
-                </Button>}
+               {product.length !== 0 && <TouchableOpacity 
+                onPress={() => clearCart()}>
+                  <FontAwesome5 name="trash" size={20} color="black" />
+                </TouchableOpacity>}
            
             {product.map((produto) => {
-              const productPrice = produto.valor * produto.qtd
+              const productPrice = produto.preco * produto.qtd
               total += productPrice
 
               return (
                 
-                <View key={route.params.id}>
+                <View key={produto.id}>
                   <View>
                     <Image source={produto.foto} alt='' />
                   </View>
@@ -54,24 +58,22 @@ export const Cart = (props) => {
                   </View>
                   <View key={produto.id}>
                     <View>
-                      <Button onClick={() => 
+                      <TouchableOpacity onPress={() => 
                         removeItem(produto.id)
                       }>
                        
-                      </Button>
+                       <AntDesign name="close" size={24} color="black" />
+                      </TouchableOpacity>
                     </View>
                     <View >
-                      <Button onClick={() => addItem(
-                        produto.id,
-                        produto.foto,
-                        produto.nome,
-                        produto.preco
+                      <TouchableOpacity onPress={() => addItem(
+                        produto.nome,produto.preco,produto.id,produto.foto
                       )}>
-                       
-                      </Button>
-                      <Button  onClick={() => removeItemCart(produto.id)}>
-
-                      </Button>
+                       <AntDesign name="pluscircleo" size={24} color="black" />
+                      </TouchableOpacity>
+                      <TouchableOpacity  onPress={() => removeItemCart(produto.id)}>
+                      <AntDesign name="minuscircleo" size={24} color="black" />
+                      </TouchableOpacity>
                     </View>
                   </View>
 
