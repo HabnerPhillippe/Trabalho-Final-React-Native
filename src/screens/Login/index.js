@@ -53,10 +53,9 @@ export const Login = () => {
     <ContainerLogin>
       <Gradient />
       <Logo source={logo} />
-      <EmailInput
-       
+      <EmailInput 
        onChangeText={(Text) => setUser({ ...user, login: Text })}
-        placeholder={"E-mail"}
+        placeholder={"Login"}
         style={{
           textAlign: "center",
           color: "white",
@@ -64,7 +63,6 @@ export const Login = () => {
         }}
       ></EmailInput>
       <PassInput
-           
            onChangeText={(Text) => setUser({ ...user, pass: Text })}
         placeholder={"Senha"}
         style={{
@@ -73,7 +71,6 @@ export const Login = () => {
           borderBottom: "1px solid #000000",
         }}
       ></PassInput>
-      <MaterialIcons name="email" size={24} color="black" />
       <TouchablePass>
         <ForgotPass onPress={() => navigation.navigate("ForgotPass")}>
           Esqueceu a senha?

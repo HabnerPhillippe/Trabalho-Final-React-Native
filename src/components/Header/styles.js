@@ -2,7 +2,7 @@ import styled from "styled-components/native";
 
 export const Container = styled.View`
   align-self: flex-start;
-  width: 98%;
+  width: 100%;
   border-left-width: 150%;
   height: 75px;
   border-bottom-right-radius: 5px;
@@ -11,7 +11,7 @@ export const Container = styled.View`
   justify-content: space-between;
   margin-bottom: 30px;
   align-items: center;
-  padding: 0 25px 0 10px;
+  background-color: red;
 `;
 
 export const TitleContainer = styled.View`

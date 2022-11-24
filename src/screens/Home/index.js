@@ -8,19 +8,21 @@ import { ItemCategory } from "../../components/ItemCategory/index.js";
 import { useState, useEffect } from "react";
 import { Gradient } from "../../components/Gradient/index.js";
 
+
 export const Home = () => {
   const navigation = useNavigation();
+  
   const [product, setProduct] = useState([]);
 
   const renderItem = ({ item }) => (
-    <ItemCategory name={item.nome} photo={item.foto} />
+    <ItemCategory name={item.nome} photo={item.foto} id={item.id} price={item.preco} />
   );
 
   useEffect(() => {
-    getProdutos();
+    getProduct();
   }, [product]);
 
-  const getProdutos = async () => {
+  const getProduct = async () => {
     const { data } = await Api.get("/produto");
     setProduct(data);
   };
@@ -29,11 +31,13 @@ export const Home = () => {
     navigation.goBack();
   }
 
+
+
   return (
     <MainContainer>
-      <Header title={"Mais vendidos !"} />
+      <Header title={"Mais vendidos !"} iconName={"arrow-back"} goBack={goBack} />
 
-      {/* <PlusButton onPress={() => navigation.navigate("CategoryRegister")} /> */}
+      
       <FlatList
         data={product}
         keyExtractor={(item) => item.id}

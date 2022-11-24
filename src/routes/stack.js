@@ -6,9 +6,7 @@ import { EditCategory } from "../screens/EditCategory/index.js";
 import { ForgotPass } from "../screens/ForgotPass/index";
 import { Home } from "../screens/Home/index";
 import { Login } from "../screens/Login/index.js";
-
 import CreateAccount from "../screens/CreateAccount/index.js";
-import { ProductPage } from "../screens/ProductPage/index";
 import { Splash } from "../screens/Splash/index.js";
 
 const Stack = createStackNavigator();
@@ -26,7 +24,6 @@ export function StackRoutes() {
       <Stack.Screen name="ForgotPass" component={ForgotPass} />
       <Stack.Screen name="Cart" component={Cart} />
       <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Product" component={ProductPage} />
       <Stack.Screen name="Categories" component={Categories} />
       <Stack.Screen name="CategoryRegister" component={CategoryRegister} />
       <Stack.Screen name="EditCategory" component={EditCategory} />
