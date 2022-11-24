@@ -31,7 +31,7 @@ export const ItemCategory = ({ id, name, photo,price }) => {
   return (
     <Card >
       <Photo source={{ uri: photo }} />
-      <ComprarButton onClick={() => props.navigation.navigate("Cart",{product})}>
+      <ComprarButton onPress={() => addItem(name,price,id,photo)}>
         <ComprarText>COMPRAR</ComprarText>
       </ComprarButton>
       <TextContainer>
