@@ -5,15 +5,17 @@ import { Categories } from "../screens/Categories/index.js";
 import { CategoryRegister } from "../screens/CategoryRegister/index.js";
 import { EditCategory } from "../screens/EditCategory/index.js";
 import { ForgotPass } from "../screens/ForgotPass/index";
-import { Home } from "../screens/Home/index"
+import { Home } from "../screens/Home/index";
+import { Ionicons } from "@expo/vector-icons";
 import { Login } from "../screens/Login/index.js";
 import { ProductPage } from "../screens/ProductPage/index";
 import React from "react";
 
+
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
-function TabRoutes() {
+export function TabRoutes() {
   return (
     <Tab.Navigator
       screenOptions={{
@@ -27,14 +29,37 @@ function TabRoutes() {
       }}
       tabBarOptions={{
         activeTintColor: "#FF0000",
+        inactiveTintColor: "#BEBEBE"
       }}
-          
-          
-      
+
       >
-      <Tab.Screen name="Início" component={Home}/>
-      <Tab.Screen name="Produto" component={ProductPage}/>
-      <Tab.Screen name="Carrinho" component={Cart}/>
+      <Tab.Screen
+        name="Início"
+        component={Home}
+        options={{
+            tabBarIcon: () => (
+              <Ionicons name="home-outline" size={25} color={"#BEBEBE"}/>
+            ),
+        }}
+      />
+      <Tab.Screen
+        name="Produtos"
+        component={ProductPage}
+        options={{
+          tabBarIcon: () => (
+            <Ionicons name="grid-outline" size={25} color={"#BEBEBE"}/>
+          ),
+      }}
+        />
+      <Tab.Screen
+        name="Carrinho"
+        component={Cart}
+        options={{
+          tabBarIcon: () => (
+            <Ionicons name="cart-outline" size={25} color={"#BEBEBE"}/>
+          ),
+      }}
+        />
     </Tab.Navigator>
   );
 }
@@ -46,12 +71,14 @@ export function StackRoutes() {
         headerShown: false,
       }}
     >
+      <Stack.Screen name="ForgotPass" component={ForgotPass} />
+      <Stack.Screen name="Categories" component={Categories} />
+      <Stack.Screen name="CategoryRegister" component={CategoryRegister} />
+      <Stack.Screen name="Cart" component={TabRoutes} />
+      <Stack.Screen name="EditCategory" component={EditCategory} />
       <Stack.Screen name="Home" component={TabRoutes} />
       <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="Categories" component={TabRoutes} />
-      <Stack.Screen name="CategoryRegister" component={TabRoutes} />
-      <Stack.Screen name="EditCategory" component={TabRoutes} />
-      <Stack.Screen name="ForgotPass" component={TabRoutes} />
+      <Stack.Screen name="ProductPage" component={TabRoutes} />
     </Stack.Navigator>
   );
 }
