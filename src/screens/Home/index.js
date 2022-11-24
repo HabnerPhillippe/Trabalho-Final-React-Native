@@ -6,32 +6,38 @@ import { MainContainer } from "../../components/MainContainer/styles.js";
 import { PlusButton } from "../../components/PlusButton/index.js";
 import { useNavigation } from "@react-navigation/native";
 import { useState, useEffect } from "react";
+import { Gradient } from "../../components/Gradient/index.js";
 
-export const Home = ()=> {
-    const navigation = useNavigation();
-    const [product, setProduct] = useState([]);
 
-    const renderItem = ({ item }) => (
-        <ItemCategory name={item.nome} photo={item.foto} />
-      );
+export const Home = () => {
+  const navigation = useNavigation();
+  
+  const [product, setProduct] = useState([]);
 
-      useEffect(() => {
-        getProdutos();
-      }, [product]);
+  const renderItem = ({ item }) => (
+    <ItemCategory name={item.nome} photo={item.foto} id={item.id} price={item.preco} />
+  );
 
-      const getProdutos= async () => {
-        const { data } = await Api.get("/produto");
-        setProduct(data);
-      };
-    
-      function goBack() {
-        navigation.goBack();
-      };
+  useEffect(() => {
+    getProduct();
+  }, [product]);
+
+  const getProduct = async () => {
+    const { data } = await Api.get("/produto");
+    setProduct(data);
+  };
+
+  function goBack() {
+    navigation.goBack();
+  }
+
+
 
   return (
     <MainContainer>
-      <Header title={"Mais Vendidos!"} iconName={"arrow-back"} goBack={goBack} />
-      {/* <PlusButton onPress={() => navigation.navigate("CategoryRegister")} /> */}
+      <Header title={"Mais vendidos !"} iconName={"arrow-back"} goBack={goBack} />
+
+      
       <FlatList
         data={product}
         keyExtractor={(item) => item.id}
@@ -39,5 +45,5 @@ export const Home = ()=> {
         numColumns={2}
       />
     </MainContainer>
-  )
-}
+  );
+};
