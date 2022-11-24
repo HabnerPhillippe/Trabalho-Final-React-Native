@@ -1,17 +1,15 @@
-import { MaterialIcons, FontAwesome5 } from "@expo/vector-icons";
-import { useContext, useState, useEffect} from "react";
-import { useNavigation } from "@react-navigation/native";
 import { Api } from "../../services/index.js";
+import { ButtonsContainer, Card, CustomButton, Name, Photo, TextContainer } from "./styles";
 import colors from "../../themes/colors";
-import { Card, Photo, TextContainer, Name, CustomButton, ButtonsContainer, ComprarButton, ComprarText } from "./styles";
 import { IdContext } from "../../context/index.js";
-import { CartContext } from "../../context/Cart";
+import { MaterialIcons, FontAwesome5 } from "@expo/vector-icons";
+import { useContext } from "react";
+import { useNavigation } from "@react-navigation/native";
 
-export const ItemCategory = ({ id, name, photo,price }) => {
-  const [product, setProduct] = useState([]);
+export const ItemCategory = ({ name, photo }) => {
+
   const { setId } = useContext(IdContext)
-  const navigation = useNavigation()
-  const { addItem } = useContext(CartContext)
+  const navigation = useNavigation();
 
   function deleteItem(id) {
     Api.delete(`/categoria/${id}`)
@@ -26,20 +24,15 @@ export const ItemCategory = ({ id, name, photo,price }) => {
     setId(itemId);
     navigation.navigate("EditCategory");
   };
-  
 
   return (
-    <Card >
+    <Card>
       <Photo source={{ uri: photo }} />
-      <ComprarButton onPress={() => addItem(name,price,id,photo)}>
-        <ComprarText>COMPRAR</ComprarText>
-      </ComprarButton>
       <TextContainer>
         <Name>{name}</Name>
-        <Name style={{color:"red"}}>R${price}</Name>
       </TextContainer>
       <ButtonsContainer>
-        <CustomButton onPress={() => navigation.navigate("Cart")}>
+        <CustomButton onPress={() => navigation.navigate("Product")}>
           <FontAwesome5 name="trash" size={20} color={colors.primary} />
         </CustomButton>
         <CustomButton onPress={() => editItem(id)}> 

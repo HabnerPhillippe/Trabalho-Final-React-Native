@@ -1,10 +1,3 @@
-import { MaterialIcons } from "@expo/vector-icons";
-import { useNavigation } from "@react-navigation/native";
-import React, { useState } from "react";
-import { Text, TouchableOpacity } from "react-native";
-import logo from "../../../assets/logo.png";
-import { Gradient } from "../../components/Gradient";
-import { Api } from "../../services";
 import {
   ContainerLogin,
   EmailInput,
@@ -13,75 +6,42 @@ import {
   LoginText,
   Logo,
   PassInput,
-  TouchablePass
+  TouchablePass,
 } from "./styles";
+import { Gradient } from "../../components/Gradient";
+import logoLogin from "../../../assets/logoLogin.png";
+import { MaterialIcons } from "@expo/vector-icons";
+import React, { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
 
 export const Login = () => {
   const [user, setUser] = useState({
-    login: " ",
+    email: " ",
     pass: " ",
   });
   const navigation = useNavigation();
 
-  const screenCreateAccount = () => {
-    navigation.navigate("CreateAccount");
-  };
-  const logar = () => {
-    console.log("logando")
-
-
-    Api.get(`usuario/login?login=${user.login}&senha=${user.pass}`)
-       .then((res) => {
-        if(res.data !== "Login e/ou senha inválidos.") {
-            
-            navigation.navigate("Home")
-            console.log("logou")
-        }
-        else{
-          
-        
-          alert("errou") 
-        }
-       }).catch((err) => {
-        console.log(err)
-       });
-
-       
-       
-};
   return (
     <ContainerLogin>
       <Gradient />
-      <Logo source={logo} />
-      <EmailInput 
-       onChangeText={(Text) => setUser({ ...user, login: Text })}
-        placeholder={"Login"}
-        style={{
-          textAlign: "center",
-          color: "white",
-          borderBottom: "1px solid #000000",
-        }}
+      <Logo source={logoLogin} />
+      <EmailInput
+        onChangeText={setUser}
+        placeholder={"E-mail"}
+        style={{textAlign: "center", color: "white", borderBottom: "1px solid #000000"}}
       ></EmailInput>
       <PassInput
-           onChangeText={(Text) => setUser({ ...user, pass: Text })}
+        onChangeText={setUser}
         placeholder={"Senha"}
-        style={{
-          textAlign: "center",
-          color: "white",
-          borderBottom: "1px solid #000000",
-        }}
+        style={{textAlign: "center", color: "white", borderBottom: "1px solid #000000"}}    
       ></PassInput>
       <TouchablePass>
-        <ForgotPass onPress={() => navigation.navigate("ForgotPass")}>
-          Esqueceu a senha?
-        </ForgotPass>
+      <MaterialIcons name="email" size={24} color="black" />
+        <ForgotPass onPress={()=>navigation.navigate("ForgotPass")}>Esqueceu a senha?</ForgotPass>
       </TouchablePass>
-      <LoginButton onPress={logar}>
-        <LoginText>LOGIN</LoginText>
+      <LoginButton onPress={() => navigation.navigate("Home")}>
+        <LoginText>ENTRAR</LoginText>
       </LoginButton>
-      <TouchableOpacity onPress={screenCreateAccount}>
-        <Text style={{ color: "#FFFF" }}>Não tem conta? Cadastre-se!</Text>
-      </TouchableOpacity>
     </ContainerLogin>
   );
 };

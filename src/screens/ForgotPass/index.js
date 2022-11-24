@@ -1,54 +1,27 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { EmailInput} from "./styles";
 import React, { useState } from "react";
-import { EmailInput, PassInput} from "./styles";
+import { Text, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { ContainerCadastro } from "../CreateAccount/styles";
-import { ContainerLogin } from "../Login/styles";
-import { ContainerSplash } from "../Splash/styles";
-import { Gradient } from "../../components/Gradient";
-import { Ionicons } from "@expo/vector-icons";
-export const ForgotPass = () => {
-  const [email, setEmail] = useState("");
 
-  const navigation = useNavigation();
+export const ForgotPass=()=> {
+    const [email, setEmail] = useState("");
 
-  const recover = () => {
-    alert(email);
-  };
+    const navigation = useNavigation();
 
-  function goBack() {
-    navigation.goBack();
-  };
-
+    const recover = () => {alert(email)};
   return (
-    <ContainerSplash>
-      <Gradient />
-      <TouchableOpacity onPress={goBack}>
-          <Ionicons name={"arrow-back"} color={"white"} size={35} />
-      </TouchableOpacity>  
-      <EmailInput
-        autoFocus={true}
-        keyboardType={"email.adress"}
-        onChangeText={(t) => setEmail(t)}
-        onEndEditing={() => this.passTextInput.focus()}
-        placeholder={"Login"}
-        placeholderposition={"center"}
-        returnKeyType={"go"}
-        style={{
-          textAlign: "center",
-          color: "white",
-          borderBottom: "1px solid #000000",
-        }}
-      />
-      <PassInput
-        onChangeText={(Text) => setUser({ ...user, pass: Text })}
-        placeholder={"Nova Senha"}
-        style={{
-          textAlign: "center",
-          color: "white",
-          borderBottom: "1px solid #000000",
-        }}
-      ></PassInput>
-    </ContainerSplash>
-  );
-};
+    <View>
+    <Text>Recuperar Senha</Text>
+       <EmailInput
+       autoFocus={true}
+       keyboardType={"email.adress"}
+       onChangeText={(t) => setEmail(t)}
+       onEndEditing={() => this.passTextInput.focus()}
+       placeholder={"E-mail"}
+       placeholderposition={"center"}
+       placeholderTextColor={"gray"}
+       returnKeyType={"go"}
+       />
+    </View>
+  )
+}

@@ -1,30 +1,35 @@
 import styled from "styled-components/native";
+import colors from "../../themes/colors.js";
 
 export const Container = styled.View`
   align-self: flex-start;
   width: 100%;
-  border-left-width: 150%;
-  height: 75px;
+  height: 77px;
+  background-color: ${colors.secondary};
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 30px;
   align-items: center;
-  background-color: red;
+  padding: 0 10px 0 10px;
+`;
+
+export const Logo = styled.Image`
+  height: 125px;
+  top: 7px;
+  width: 125px;
+`;
+  
+export const Title = styled.Text`
+  color: ${colors.primary};
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  border-bottom-width:2px;
 `;
 
 export const TitleContainer = styled.View`
   margin-left: 20px;
-`;
-
-export const Title = styled.Text`
-  text-align: center;
-  font-weight: bold;
-  font-size: 25px;
-`;
-
-export const Logo = styled.Image`
-  width: 85;
-  height: 85;
 `;
