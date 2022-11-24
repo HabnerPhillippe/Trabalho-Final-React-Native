@@ -5,21 +5,6 @@ export const ContainerLogin = styled.View`
   width: 100%;
 `;
 
-export const TouchablePass = styled.TouchableOpacity`
-  position: absolute;
-    width: 40%;
-  height: 100%;
-  left: 60%;
-`;
-
-export const Logo = styled.Image`
-  height: 45%;
-  position: absolute;
-  bottom: 20rem;
-  width: 45%;
-  align-self: center;
-`;
-
 export const EmailInput = styled.TextInput`
   height: 3rem;
   opacity: 0.9;
@@ -27,17 +12,7 @@ export const EmailInput = styled.TextInput`
   bottom: 16rem;
   width: 85%;
   align-self: center;
-`;
-
-export const PassInput = styled.TextInput`
-  
-  height: 3rem;
-  opacity: 1.9;
-  position: absolute;
-  bottom: 12rem;
-  width: 85%;
-  align-self: center;
-`;
+  `;
 
 export const ForgotPass = styled.Text`
   color: #ffffff;
@@ -49,8 +24,7 @@ export const ForgotPass = styled.Text`
   line-height: 16px;
   position: absolute;
   bottom: 10rem;
-  
-  right: 40px;
+  right: 50px;
 `;
 
 export const LoginButton = styled.TouchableOpacity`
@@ -66,6 +40,40 @@ export const LoginButton = styled.TouchableOpacity`
   align-self: center;
 `;
 
+export const LoginText = styled.Text`
+  color: #ffff;
+  font-family: Sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  align-self: center;
+  top:10px;
+  letter-spacing: 0.05em;
+  line-height: 24px;
+  position: absolute;
+  
+`;
+
+export const Logo = styled.Image`
+    align-self: center;
+    bottom: 20rem;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+`;
+
+export const PassInput = styled.TextInput`
+  
+  height: 3rem;
+  opacity: 1.9;
+  position: absolute;
+  bottom: 12rem;
+  width: 85%;
+  align-self: center;
+  `;
+
+
 export const TextButton = styled.Text`
   color: #ffff;
   font-family: Inter;
@@ -80,17 +88,11 @@ export const TextButton = styled.Text`
   top: 10px;
   width: 92px;
   align-self: center;
-`;
-export const LoginText = styled.Text`
-  color: #ffff;
-  font-family: Sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  align-self: center;
-  top:10px;
-  letter-spacing: 0.05em;
-  line-height: 24px;
-  position: absolute;
-  
-`;
+  `;
+
+  export const TouchablePass = styled.TouchableOpacity`
+    position: absolute;
+      width: 40%;
+    height: 100%;
+    left: 60%;
+  `;

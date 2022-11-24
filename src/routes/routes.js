@@ -1,4 +1,5 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createStackNavigator } from "@react-navigation/stack";
 import { Cart } from "../screens/Cart/index"
 import { Categories } from "../screens/Categories/index.js";
 import { CategoryRegister } from "../screens/CategoryRegister/index.js";
@@ -9,24 +10,48 @@ import { Login } from "../screens/Login/index.js";
 import { ProductPage } from "../screens/ProductPage/index";
 import React from "react";
 
-
+const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
-export function Routes() {
+function TabRoutes() {
   return (
     <Tab.Navigator
       screenOptions={{
         headerShow:false,
+        tabBarStyle:{
+          backgroundColor: "#ffff",
+          borderTopColor: "#EBE4E4",
+          paddingBottom: 5,
+          paddingTop: 5,
+        }
       }}
+      tabBarOptions={{
+        activeTintColor: "#FF0000",
+      }}
+          
+          
+      
       >
-      <Tab.Screen name="Home" component={Home}/>
-      <Tab.Screen name="Login"  component={Login}/>
-      <Tab.Screen name="ForgotPass" component={ForgotPass}/>
-      <Tab.Screen name="Cart" component={Cart}/>
-      <Tab.Screen name="Product" component={ProductPage}/>
-      <Tab.Screen name="Categories" component={Categories}/>
-      <Tab.Screen name="CategoryRegister" component={CategoryRegister}/>
-      <Tab.Screen name="EditCategory" component={EditCategory}/>
+      <Tab.Screen name="Início" component={Home}/>
+      <Tab.Screen name="Produto" component={ProductPage}/>
+      <Tab.Screen name="Carrinho" component={Cart}/>
     </Tab.Navigator>
+  );
+}
+
+export function StackRoutes() {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <Stack.Screen name="Home" component={TabRoutes} />
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Categories" component={TabRoutes} />
+      <Stack.Screen name="CategoryRegister" component={TabRoutes} />
+      <Stack.Screen name="EditCategory" component={TabRoutes} />
+      <Stack.Screen name="ForgotPass" component={TabRoutes} />
+    </Stack.Navigator>
   );
 }

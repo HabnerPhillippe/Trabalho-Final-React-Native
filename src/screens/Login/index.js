@@ -9,7 +9,7 @@ import {
   TouchablePass,
 } from "./styles";
 import { Gradient } from "../../components/Gradient";
-import logo from "../../../assets/logo.png";
+import logoLogin from "../../../assets/logoLogin.png";
 import { MaterialIcons } from "@expo/vector-icons";
 import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
@@ -24,7 +24,7 @@ export const Login = () => {
   return (
     <ContainerLogin>
       <Gradient />
-      <Logo source={logo} />
+      <Logo source={logoLogin} />
       <EmailInput
         onChangeText={setUser}
         placeholder={"E-mail"}

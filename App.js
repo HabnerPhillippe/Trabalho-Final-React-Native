@@ -2,7 +2,7 @@ import { CartProvider } from "./src/context/Cart.js";
 import { IdProvider } from "./src/context";
 import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
-import { Routes } from "./src/routes/routes";
+import { StackRoutes } from "./src/routes/routes";
 import "react-native-gesture-handler";
 
 export default function App() {
@@ -10,7 +10,7 @@ export default function App() {
     <CartProvider>
       <IdProvider>
         <NavigationContainer>
-          <Routes />
+          <StackRoutes />
         </NavigationContainer>
       </IdProvider>
     </CartProvider>

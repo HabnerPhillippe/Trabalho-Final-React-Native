@@ -15,10 +15,12 @@ export const Container = styled.View`
   padding: 0 10px 0 10px;
 `;
 
-export const TitleContainer = styled.View`
-  margin-left: 20px;
+export const Logo = styled.Image`
+  height: 125px;
+  top: 7px;
+  width: 125px;
 `;
-
+  
 export const Title = styled.Text`
   color: ${colors.primary};
   font-family: sans-serif;
@@ -28,7 +30,6 @@ export const Title = styled.Text`
   border-bottom-width:2px;
 `;
 
-export const Logo = styled.Image`
-  width: 81;
-  height: 81;
+export const TitleContainer = styled.View`
+  margin-left: 20px;
 `;

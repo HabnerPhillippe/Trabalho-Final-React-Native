@@ -1,10 +1,10 @@
-import { MainContainer } from "../../components/MainContainer/styles.js";
-import { Header } from "../../components/Header/index.js";
-import { useNavigation } from "@react-navigation/native";
-import { PlusButton } from "../../components/PlusButton/index.js";
 import { Api } from "../../services";
-import { FlatList } from "react-native";
 import { ItemCategory } from "../../components/ItemCategory/index.js";
+import { FlatList } from "react-native";
+import { Header } from "../../components/Header/index.js";
+import { MainContainer } from "../../components/MainContainer/styles.js";
+import { PlusButton } from "../../components/PlusButton/index.js";
+import { useNavigation } from "@react-navigation/native";
 import { useState, useEffect } from "react";
 
 export const Home = ()=> {

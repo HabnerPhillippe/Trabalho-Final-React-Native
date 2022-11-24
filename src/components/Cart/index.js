@@ -1,6 +1,6 @@
-import { useContext } from "react"
-import { View, Button, Image,Text } from "react-native-web"
+import { Button, Image, Text, View } from "react-native-web"
 import { CartContext } from "../../context/Cart"
+import { useContext } from "react"
 
 export const Carrinho = () => {
     

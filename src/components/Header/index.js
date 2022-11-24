@@ -1,7 +1,7 @@
-import { Container, TitleContainer, Title, Logo } from "./styles.js";
-import { TouchableOpacity } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
 import colors from "../../themes/colors.js";
+import { Container, TitleContainer, Title, Logo } from "./styles.js";
+import { Ionicons } from "@expo/vector-icons";
+import { TouchableOpacity } from "react-native";
 
 export const Header = ({ title, goBack, iconName }) => {
   return (
