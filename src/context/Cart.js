@@ -5,16 +5,16 @@ export const CartContext = createContext({});
 export const CartProvider = ({ children }) => {
   const [product, setProduct] = useState([])
 
-  function addItem(nome, preco, id, foto) {
+  function addItem(name, price, id, photo) {
     const itemObject = [...product];
     const item = itemObject.find((produto) => produto.id === id)
 
     if (!item) {
       itemObject.push({
         id: id,
-        foto: foto,
-        nome: nome,
-        preco: preco,
+        foto: photo,
+        nome: name,
+        preco: price,
         qtd: 1,
       });
     } else {

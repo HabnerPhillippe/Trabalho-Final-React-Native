@@ -3,7 +3,9 @@ import React, { useState } from "react";
 import logo from "../../../assets/logo.png";
 import { Gradient } from "../../components/Gradient";
 import { Api } from "../../services";
+import { TouchableOpacity } from "react-native"
 import { CadastroText, ContainerCadastro, ContCadastro, LoginButton, Logo, TextoInput } from "./styles";
+import { Ionicons } from "@expo/vector-icons";
 
 const CreateAccount = () => {
   const [apiResponse, setApiResponse] = useState();
@@ -40,9 +42,16 @@ const CreateAccount = () => {
     console.log(user);
   };
 
+  function goBack() {
+    navigation.goBack();
+  };
+
   return (
     <ContainerCadastro>
       <Gradient />
+      <TouchableOpacity onPress={goBack}>
+          <Ionicons name={"arrow-back"} color={"white"} size={35} />
+      </TouchableOpacity>  
       <Logo source={logo} />
       <ContCadastro> 
       <TextoInput

@@ -6,11 +6,9 @@ import { Gradient } from "../Gradient/index.js";
 export const Header = ({ title, goBack, iconName }) => {
   return (
     <Container>
-      <Gradient>
         <TouchableOpacity onPress={goBack}>
           <Ionicons name={iconName} size={35} />
         </TouchableOpacity>
-      </Gradient>
       <TitleContainer>
         <Title>{title}</Title>
       </TitleContainer>

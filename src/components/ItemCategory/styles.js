@@ -20,23 +20,23 @@ export const Photo = styled.Image`
 `;
 
 export const TextContainer = styled.View`
-  width: 70px;
+  width: 130px;
   position: absolute;
-  bottom: 130px;
-  left: 70px;
+  top: 90px;
+  right: 20px;
 `;
 
 export const Name = styled.Text`
   color: ${colors.primary};
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 12px;
 `;
 
 export const ButtonsContainer = styled.View`
     flex-direction: row;
     position: absolute;
-    bottom: 30px;
+    bottom: 44px;
     right: 50px;
 `;
 
@@ -54,11 +54,11 @@ export const ComprarButton = styled.TouchableOpacity`
   border-radius: 3px;
   opacity: 0.5;
   position: absolute;
-  bottom: 6rem;
-  width: 6rem;
+  bottom: 5rem;
+  width: 8rem;
   height: 2rem;
   align-self: center;
-  left: 45px;
+  left: 30px;
 `;
 
 export const ComprarText = styled.Text`
