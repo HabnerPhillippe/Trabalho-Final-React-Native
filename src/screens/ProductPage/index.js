@@ -1,6 +1,6 @@
 import { Api } from "../../services/index.js";
 import { CartContext } from "../../context/Cart.js"
-import { Container } from "./styles.js";
+import { ContainerLogin } from ".././Login/styles.js";
 import { Image, View } from "react-native";
 import React, {useState,useEffect} from "react";
 
@@ -19,7 +19,7 @@ export const ProductPage = ({id}) => {
   };
 
   return (
-    <Container>
+    <ContainerLogin>
         {product?.map((produto) => {
               return (
                 <View key={produto.id}>
@@ -29,6 +29,6 @@ export const ProductPage = ({id}) => {
                 </View>
               );
         })}
-      </Container>
+      </ContainerLogin>
   );
 };
