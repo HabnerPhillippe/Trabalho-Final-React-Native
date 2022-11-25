@@ -36,7 +36,7 @@ export const Login = () => {
         style={{textAlign: "center", color: "white", borderBottom: "1px solid #000000"}}    
       ></PassInput>
       <TouchablePass>
-      <MaterialIcons name="email" size={24} color="black" />
+      {/*<MaterialIcons name="email" size={24} color="black" />*/}
         <ForgotPass onPress={()=>navigation.navigate("ForgotPass")}>Esqueceu a senha?</ForgotPass>
       </TouchablePass>
       <LoginButton onPress={() => navigation.navigate("Home")}>
