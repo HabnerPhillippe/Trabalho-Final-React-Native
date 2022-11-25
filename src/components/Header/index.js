@@ -7,7 +7,7 @@ export const Header = ({ title, goBack, iconName }) => {
   return (
     <Container>
       <TouchableOpacity onPress={goBack}>
-        <Ionicons name={iconName} size={35} color={colors.primary} />
+        <Ionicons name={iconName} size={25} color={colors.primary} />
       </TouchableOpacity>
       <TitleContainer>
         <Title>{title}</Title>

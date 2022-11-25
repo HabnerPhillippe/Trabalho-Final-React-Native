@@ -1,10 +1,9 @@
-import { EmailInput, MarcaDagua, NewPassButton, TextEmail} from "./styles";
+import { EmailInput, MarcaDagua, NewPassButton, TextButton, TextEmail} from "./styles";
 import { Header } from "../../components/Header/index.js";
 import { MainContainer } from "../../components/MainContainer/styles.js";
 import marcaDagua from "../../../assets/marcaDagua.png";
 import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { TextButton } from "../Login/styles";
 
 export const ForgotPass=()=> {
     const [email, setEmail] = useState("");
@@ -19,9 +18,9 @@ export const ForgotPass=()=> {
 
   return (
     <MainContainer>
-      <Header title={"Esqueci minha senha"} iconName={"arrow-back"} goBack={goBack} />
+      <Header title={"Esqueci Minha Senha"} iconName={"arrow-back"} goBack={goBack} />
       <MarcaDagua source={marcaDagua} />
-      <TextEmail>Confirme o e-mail de cadastro</TextEmail>
+      <TextEmail>Digite seu e-mail de cadastro</TextEmail>
        <EmailInput
         autoFocus={true}
         keyboardType={"email.adress"}
@@ -32,8 +31,10 @@ export const ForgotPass=()=> {
         placeholderTextColor={"gray"}
         returnKeyType={"go"}
        />
-       <NewPassButton onPress={() => navigation.navigate("Home")}>
-        <TextButton>ENTRAR</TextButton></NewPassButton>
+       <NewPassButton onPress={() => {
+        alert("Te enviamos um e-mail para troca de senha!");
+        navigation.navigate("Login")}}>
+        <TextButton>ENVIAR</TextButton></NewPassButton>
 
     </MainContainer>
   )

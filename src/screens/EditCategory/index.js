@@ -39,7 +39,7 @@ export const EditCategory = ({ navigation }) => {
             <Header title={"Editar categoria"} goBack={goBack} iconName={"arrow-back"} />
             <ImgButton sourceImg={{ uri: photo }} />
             <EditInput name={"Nome:"} value={name} onChangeText={(text) => setName(text)} />
-            <MainButton style={{ marginTop: 60 }} onPress={() => save()} >      </MainButton>
+            <MainButton style={{ marginTop: 60 }} onPress={() => save()} ></MainButton>
             <ButtonText>
                 Salvar
             </ButtonText>
