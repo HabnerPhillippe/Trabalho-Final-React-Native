@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { TextInput, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 export const CadastroUser = () => {
     const navigation = useNavigation();

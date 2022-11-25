@@ -1,4 +1,5 @@
 import { CadastroUser } from "../screens/Login/CadastroUser/index.js";
+import { CreateAccount } from "../screens/CreateAccount/index.js"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import { Cart } from "../screens/Cart/index"
@@ -9,7 +10,7 @@ import { ForgotPass } from "../screens/ForgotPass/index";
 import { Home } from "../screens/Home/index";
 import { Ionicons } from "@expo/vector-icons";
 import { Login } from "../screens/Login/index.js";
-import { ProductPage } from "../screens/ProductPage/index";
+
 import React from "react";
 
 const Stack = createStackNavigator();
@@ -19,7 +20,7 @@ export function TabRoutes() {
   return (
     <Tab.Navigator
       screenOptions={{
-        headerShow:false,
+        headerShown:false,
         tabBarStyle:{
           backgroundColor: "#ffff",
           borderTopColor: "#EBE4E4",
@@ -43,15 +44,6 @@ export function TabRoutes() {
         }}
       />
       <Tab.Screen
-        name="Produtos"
-        component={ProductPage}
-        options={{
-          tabBarIcon: () => (
-            <Ionicons name="grid-outline" size={25} color={"#BEBEBE"}/>
-          ),
-      }}
-        />
-      <Tab.Screen
         name="Carrinho"
         component={Cart}
         options={{
@@ -71,15 +63,14 @@ export function StackRoutes() {
         headerShown: false,
       }}
     >
+      <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Cart" component={TabRoutes} />
       <Stack.Screen name="ForgotPass" component={ForgotPass} />
-      <Stack.Screen name="CadastroUser" component={CadastroUser} />
+      <Stack.Screen name="CreateAccount" component={CreateAccount} />
       <Stack.Screen name="Categories" component={Categories} />
       <Stack.Screen name="CategoryRegister" component={CategoryRegister} />
-      <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Home" component={TabRoutes} />
       <Stack.Screen name="EditCategory" component={EditCategory} />
-      <Stack.Screen name="ProductPage" component={ProductPage} />
     </Stack.Navigator>
   );
 }

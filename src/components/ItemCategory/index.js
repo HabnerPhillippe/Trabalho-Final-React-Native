@@ -36,14 +36,6 @@ export const ItemCategory = ({id, name, photo,price }) => {
       <ComprarButton onPress={() => addItem(name,price,id,photo)}>
         <ComprarText>COMPRAR</ComprarText>
       </ComprarButton>
-      <ButtonsContainer>
-        <CustomButton onPress={() => navigation.navigate("Product")}>
-          <FontAwesome5 name="trash" size={20} color={colors.primary} />
-        </CustomButton>
-        <CustomButton onPress={() => editItem(id)}> 
-          <MaterialIcons name="edit" size={24} color={colors.primary} />
-        </CustomButton>
-      </ButtonsContainer>
     </Card>
   );
 };
