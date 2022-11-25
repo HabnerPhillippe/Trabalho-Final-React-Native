@@ -6,7 +6,6 @@ import { Api } from "../../services";
 import { FlatList } from "react-native";
 import { ItemCategory } from "../../components/ItemCategory/index.js";
 import { useState, useEffect } from "react";
-import { Gradient } from "../../components/Gradient/index.js";
 
 
 export const Home = () => {
@@ -35,9 +34,8 @@ export const Home = () => {
 
   return (
     <MainContainer>
-      <Header title={"Mais vendidos !"} iconName={"arrow-back"} goBack={goBack} />
-
-      
+      <Header title={"Mais vendidos !"}iconName={"arrow-back"} goBack={goBack} />
+      <PlusButton onPress={() => navigation.navigate("CategoryRegister")} />
       <FlatList
         data={product}
         keyExtractor={(item) => item.id}

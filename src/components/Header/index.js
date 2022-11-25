@@ -9,9 +9,9 @@ export const Header = ({ title, goBack, iconName }) => {
         <TouchableOpacity onPress={goBack}>
           <Ionicons name={iconName} size={35} />
         </TouchableOpacity>
-      <TitleContainer>
-        <Title>{title}</Title>
-      </TitleContainer>
+        <TitleContainer>
+          <Title>{title}</Title>
+        </TitleContainer>
       <Logo source={require("../../../assets/mini.png")} />
     </Container>
   );
