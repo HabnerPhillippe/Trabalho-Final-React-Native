@@ -7,7 +7,7 @@ import { TouchableOpacity } from "react-native"
 import { CadastroText, ContainerCadastro, ContCadastro, LoginButton, Logo, TextoInput } from "./styles";
 import { Ionicons } from "@expo/vector-icons";
 
-const CreateAccount = () => {
+export const CreateAccount = () => {
   const [apiResponse, setApiResponse] = useState();
   const [error, setError] = useState();
   const [user, setUser] = useState({
@@ -122,4 +122,4 @@ const CreateAccount = () => {
   );
 };
 
-export default CreateAccount;
+

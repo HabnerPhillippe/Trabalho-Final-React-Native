@@ -59,7 +59,7 @@ export const TextEmail = styled.Text`
   letter-spacing: 0.05px;
   line-height: 16px;
   position: absolute;
-  bottom: 10rem;
-  right: 51%;
-  top: 18%;
+  bottom: 9rem;
+ align-self: center;
+  top: 16%;
 `;

@@ -54,7 +54,7 @@ export const ComprarButton = styled.TouchableOpacity`
   border-radius: 3px;
   opacity: 0.5;
   position: absolute;
-  bottom: 5rem;
+  top: 8rem;
   width: 8rem;
   height: 2rem;
   align-self: center;

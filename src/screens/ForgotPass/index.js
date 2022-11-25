@@ -19,7 +19,6 @@ export const ForgotPass=()=> {
   return (
     <MainContainer>
       <Header title={"Esqueci Minha Senha"} iconName={"arrow-back"} goBack={goBack} />
-      <MarcaDagua source={marcaDagua} />
       <TextEmail>Digite seu e-mail de cadastro</TextEmail>
        <EmailInput
         autoFocus={true}
