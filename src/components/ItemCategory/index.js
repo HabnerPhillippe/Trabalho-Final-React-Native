@@ -1,15 +1,17 @@
 import { Api } from "../../services/index.js";
-import { ButtonsContainer, Card, CustomButton, Name, Photo, TextContainer } from "./styles";
+import { ButtonsContainer, Card, ComprarText, CustomButton, Name, Photo, TextContainer,ComprarButton } from "./styles";
 import colors from "../../themes/colors";
 import { IdContext } from "../../context/index.js";
 import { MaterialIcons, FontAwesome5 } from "@expo/vector-icons";
-import { useContext } from "react";
+import { useContext,useState } from "react";
 import { useNavigation } from "@react-navigation/native";
+import { CartContext } from "../../context/Cart"
 
-export const ItemCategory = ({ name, photo }) => {
-
+export const ItemCategory = ({id, name, photo,price }) => {
+  const [product, setProduct] = useState([]);
   const { setId } = useContext(IdContext)
   const navigation = useNavigation();
+  const { addItem } = useContext(CartContext)
 
   function deleteItem(id) {
     Api.delete(`/categoria/${id}`)
@@ -31,6 +33,9 @@ export const ItemCategory = ({ name, photo }) => {
       <TextContainer>
         <Name>{name}</Name>
       </TextContainer>
+      <ComprarButton onPress={() => addItem(name,price,id,photo)}>
+        <ComprarText>COMPRAR</ComprarText>
+      </ComprarButton>
       <ButtonsContainer>
         <CustomButton onPress={() => navigation.navigate("Product")}>
           <FontAwesome5 name="trash" size={20} color={colors.primary} />
