@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
-import { TextInput, View } from 'react-native';
-
-
+import React, { useState } from "react";
+import { TextInput, View } from "react-native";
 
 export const CadastroUser = () => {
     const navigation = useNavigation();
@@ -15,25 +13,11 @@ export const CadastroUser = () => {
     })
     console.log(user);
 
-
     return (
         <View>
-            <TextInput placeholder='login'
+            <TextInput placeholder="login"
                 defaultValue={user.login}
                 onChangeText={newText => setUser(newText)} />
-
-
-
-
         </View>
-
-
-
     )
-
-
-
-
-
 }
-

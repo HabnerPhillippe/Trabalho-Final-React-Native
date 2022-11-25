@@ -1,18 +1,17 @@
-import styled from "styled-components/native";
 import colors from "../../themes/colors.js";
+import styled from "styled-components/native";
 
 export const Container = styled.View`
+  align-items: center;
   align-self: flex-start;
-  width: 100%;
-  height: 77px;
   background-color: ${colors.secondary};
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-radius: 5px;
+  height: 67px;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 30px;
-  align-items: center;
   padding: 0 10px 0 10px;
+  width: 100%;
 `;
 
 export const Logo = styled.Image`
@@ -22,12 +21,12 @@ export const Logo = styled.Image`
 `;
   
 export const Title = styled.Text`
+  border-bottom-width: 2px;
   color: ${colors.primary};
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
-  border-bottom-width:2px;
 `;
 
 export const TitleContainer = styled.View`

@@ -1,3 +1,4 @@
+import { CadastroUser } from "../screens/Login/CadastroUser/index.js";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import { Cart } from "../screens/Cart/index"
@@ -10,7 +11,6 @@ import { Ionicons } from "@expo/vector-icons";
 import { Login } from "../screens/Login/index.js";
 import { ProductPage } from "../screens/ProductPage/index";
 import React from "react";
-
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -71,14 +71,15 @@ export function StackRoutes() {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Cart" component={TabRoutes} />
       <Stack.Screen name="ForgotPass" component={ForgotPass} />
+      <Stack.Screen name="CadastroUser" component={CadastroUser} />
       <Stack.Screen name="Categories" component={Categories} />
       <Stack.Screen name="CategoryRegister" component={CategoryRegister} />
-      <Stack.Screen name="Cart" component={TabRoutes} />
-      <Stack.Screen name="EditCategory" component={EditCategory} />
+      <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Home" component={TabRoutes} />
-      <Stack.Screen name="ProductPage" component={TabRoutes} />
+      <Stack.Screen name="EditCategory" component={EditCategory} />
+      <Stack.Screen name="ProductPage" component={ProductPage} />
     </Stack.Navigator>
   );
 }
