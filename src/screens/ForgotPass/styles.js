@@ -44,6 +44,6 @@ export const NewPassButton = styled.TouchableOpacity`
   opacity: 0.5;
   position: absolute;
   right: 10%;
-  width: 45%;
+  width: 50%;
   top: 28%
 `;
