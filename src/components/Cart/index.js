@@ -13,9 +13,9 @@ export const Carrinho = () => {
     } = useContext(CartContext)
 
     let total = 0
+
     return (
         
-      
         <View>
           <View >
             {product.length === 0 && <Text>não há itens no carrinho</Text>}

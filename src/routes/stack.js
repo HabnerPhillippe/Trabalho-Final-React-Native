@@ -71,13 +71,13 @@ export function StackRoutes() {
         headerShown: false,
       }}
     >
+      <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="ForgotPass" component={ForgotPass} />
       <Stack.Screen name="Categories" component={Categories} />
       <Stack.Screen name="CategoryRegister" component={CategoryRegister} />
       <Stack.Screen name="Cart" component={TabRoutes} />
       <Stack.Screen name="EditCategory" component={EditCategory} />
       <Stack.Screen name="Home" component={TabRoutes} />
-      <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="ProductPage" component={TabRoutes} />
     </Stack.Navigator>
   );
