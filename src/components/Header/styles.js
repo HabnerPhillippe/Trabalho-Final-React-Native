@@ -21,7 +21,6 @@ export const Logo = styled.Image`
 `;
   
 export const Title = styled.Text`
-  border-bottom-width: 2px;
   color: ${colors.primary};
   font-family: sans-serif;
   font-weight: bold;

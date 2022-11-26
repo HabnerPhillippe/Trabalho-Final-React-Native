@@ -30,7 +30,7 @@ export function TabRoutes() {
       }}
       tabBarOptions={{
         activeTintColor: "#FF0000",
-        inactiveTintColor: "#BEBEBE"
+        inactiveTintColor: "#FF0000"
       }}
 
       >
@@ -39,7 +39,7 @@ export function TabRoutes() {
         component={Home}
         options={{
             tabBarIcon: () => (
-              <Ionicons name="home-outline" size={25} color={"#BEBEBE"}/>
+              <Ionicons name="home-outline" size={25} color={"#FF0000"}/>
             ),
         }}
       />
@@ -48,7 +48,7 @@ export function TabRoutes() {
         component={Cart}
         options={{
           tabBarIcon: () => (
-            <Ionicons name="cart-outline" size={25} color={"#BEBEBE"}/>
+            <Ionicons name="cart-outline" size={25} color={"#FF0000"}/>
           ),
       }}
         />

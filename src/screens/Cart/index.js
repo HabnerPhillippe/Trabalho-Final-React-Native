@@ -1,12 +1,12 @@
-import { ButtonText, BuyButton, MarcaDagua, TextBuy } from "./styles";
+import { ButtonText, BuyButton, TextBuy } from "./styles";
 import { CartContext } from "../../context/Cart";
-import { Image, Text, View } from "react-native-web"
+import { Text, View } from "react-native-web"
 import { Header } from "../../components/Header/index.js";
-import { MainContainer } from "../../components/MainContainer/styles.js";
 import React,{useContext} from "react";
 import { useNavigation } from "@react-navigation/native";
-import { TouchableOpacity } from "react-native";
-import { Entypo, FontAwesome5, AntDesign  } from '@expo/vector-icons'; 
+import { TouchableOpacity, Image } from "react-native";
+import { FontAwesome5, AntDesign  } from '@expo/vector-icons'; 
+import {RemoveItemButton, AddRemove, Resume, ProductContainer,Container, TrashButton, NoItems} from "./styles"
 
 export const Cart = (props) => {
   const navigation = useNavigation();
@@ -31,26 +31,27 @@ export const Cart = (props) => {
   }
 
   return (
-    <MainContainer>
+    <Container>
       <Header title={"Carrinho"} iconName={"arrow-back"} goBack={goBack} />
       <View>
           <View >
-            {product.length === 0 && <Text>não há itens no carrinho</Text>}
+            {product.length === 0 && <NoItems>Não há itens no carrinho</NoItems>}
 
-               {product.length !== 0 && <TouchableOpacity 
+               {product.length !== 0 && <TrashButton 
                 onPress={() => clearCart()}>
                   <FontAwesome5 name="trash" size={20} color="black" />
-                </TouchableOpacity>}
+                </TrashButton>}
            
             {product.map((produto) => {
               const productPrice = produto.preco * produto.qtd
               total += productPrice
+              const productPhoto = produto.foto
 
               return (
                 
-                <View key={produto.id}>
+                <ProductContainer key={produto.id}>
                   <View>
-                    <Image source={produto.foto} alt='' />
+                    <Image source={produto.foto} />
                   </View>
                   <View>
                     <Text>{produto.nome}</Text>
@@ -58,47 +59,34 @@ export const Cart = (props) => {
                       <Text>Quantidade: {produto.qtd} </Text>
                       <Text>Valor: R${productPrice.toFixed(2)}</Text>
                     </View>
-                  </View>
-                  <View key={produto.id}>
-                    <View>
-                    <TouchableOpacity onPress={() => 
-                        removeItem(produto.id)
-                      }>
-
-                       <AntDesign name="close" size={24} color="black" />
-                      </TouchableOpacity>
-                    </View>
-                    <View >
+                    <AddRemove>
                       <TouchableOpacity onPress={() => addItem(
                         produto.nome,produto.preco,produto.id,produto.foto
                       )}>
-                       
-                       <AntDesign name="pluscircleo" size={24} color="black" />
+                       <AntDesign name="plussquareo" size={24} color="black" />
                       </TouchableOpacity>
                       <TouchableOpacity  onPress={() => removeItemCart(produto.id)}>
-                      <AntDesign name="minuscircleo" size={24} color="black" />
+                      <AntDesign name="minussquareo" size={24} color="black" />
                       </TouchableOpacity>
-                    </View>
+                      <RemoveItemButton onPress={() => 
+                        removeItem(produto.id)
+                      }>
+                       <AntDesign name="close" size={24} color="black" />
+                      </RemoveItemButton>
+                      </AddRemove>
                   </View>
-
-                </View>
+                </ProductContainer>
               )
             })}
           </View>
-
-          <View>
-            <Text>Resumo de todo o carrinho</Text>
-            <View>
+        </View>
+        <Resume>
               <Text>Preço total do pedido: </Text>
               <Text>R${total.toFixed(2)}</Text>
-            </View>
-          </View>
-        </View>
-      
-      <TextBuy>Finalizar pedido</TextBuy>
+          </Resume>
       <BuyButton onPress={() => endCart()}>
-        <ButtonText>Comprar</ButtonText>
-      </BuyButton>   
-    </MainContainer>
+        <ButtonText>FINALIZAR</ButtonText>
+      </BuyButton>
+    </Container>
   );
 };
