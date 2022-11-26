@@ -7,7 +7,7 @@ import { useContext,useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { CartContext } from "../../context/Cart"
 
-export const ItemCategory = ({id, name, photo,price }) => {
+export const ItemCategory = ({ name,price,id,photo }) => {
   const [product, setProduct] = useState([]);
   const { setId } = useContext(IdContext)
   const navigation = useNavigation();

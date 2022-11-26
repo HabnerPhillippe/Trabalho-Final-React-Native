@@ -56,7 +56,7 @@ export const Login = () => {
       <Logo source={logoLogin} />
       <EmailInput
         onChangeText={(Text) => setUser({ ...user, login: Text })}
-        placeholder={"E-mail"}
+        placeholder={"Login"}
         style={{
           textAlign: "center",
           color: "white",

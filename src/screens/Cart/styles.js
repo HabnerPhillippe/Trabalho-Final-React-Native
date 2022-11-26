@@ -13,7 +13,6 @@ export const ButtonText = styled.Text`
   font-style: normal;
   font-weight: 600px;
   height: 19px;
-  left: 25px;
   letter-spacing: 0.05em;
   line-height: 24px;
   position: absolute;
@@ -30,28 +29,53 @@ export const BuyButton = styled.TouchableOpacity`
   height: 35px;
   opacity: 0.5;
   position: absolute;
+  align-items: center;
   right: 10%;
   width: 100px;
   top: 90%;
 `;
 
-export const MarcaDagua = styled.Image`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0%;
-`;
-
 export const TextBuy = styled.Text`
   color: #000;
   font-family: Inter;
-  font-size: 90%;
+  font-size: 70%;
   font-style: normal;
-  font-weight: 300px;
+  font-weight: 500px;
   letter-spacing: 0.05px;
   line-height: 16px;
   position: absolute;
-  bottom: 10rem;
+  bottom: 11rem;
   right: 10%;
   top: 87%;
 `;
+
+export const RemoveItemButton = styled.TouchableOpacity`
+left:70%;
+`
+
+export const AddRemove = styled.View`
+  flex-direction: row;
+  space-between: middle;
+
+`
+
+export const Resume = styled.View`
+position:absolute;
+bottom:3rem;
+left:2rem
+`
+
+export const ProductContainer = styled.View`
+top:1rem;
+padding-left: 1rem;
+border: 1px solid black;
+`
+
+export const TrashButton = styled.TouchableOpacity`
+left:90%;
+`
+
+export const NoItems = styled.Text`
+margin-left:20px;
+margin-top:10px;
+`
