@@ -65,7 +65,7 @@ export const Login = () => {
       <PassInput
         onChangeText={(Text) => setUser({ ...user, pass: Text })}
         placeholder={"Senha"}
-        SecureTextEntry={true}
+        secureTextEntry={true}
         style={{
           textAlign: "center",
           color: "white",
@@ -81,9 +81,11 @@ export const Login = () => {
       <LoginButton onPress={logar}>
         <LoginText>ENTRAR</LoginText>
       </LoginButton>
-      <TouchableOpacity onPress={screenCreateAccount}>
-        <Text style={{ color: "#FFFF" }}>Não tem conta? Cadastre-se!</Text>
+      
+      <TouchableOpacity onPress={screenCreateAccount} >
+        <Text style={{ color: "#fff",}}>              Não tem conta? Cadastre-se!</Text>
       </TouchableOpacity>
+        
     </ContainerLogin>
   );
 };

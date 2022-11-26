@@ -14,6 +14,7 @@ export const EmailInput = styled.TextInput`
   position: absolute;
   top: 55%;
   width: 85%;
+  
   `;
 
 export const ForgotPass = styled.Text`
@@ -28,6 +29,7 @@ export const ForgotPass = styled.Text`
   line-height: 16px;
   position: absolute;
   top: 68%;
+  marginTop: 30px;
 `;
 
 export const LoginButton = styled.TouchableOpacity`
@@ -89,6 +91,7 @@ export const PassInput = styled.TextInput`
   position: absolute;
   top: 61%;
   width: 85%;
+ marginTop: 20px;
   `;
 
 
