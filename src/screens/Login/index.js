@@ -1,4 +1,3 @@
-import { MaterialIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import { Text, TouchableOpacity } from "react-native";
@@ -66,6 +65,7 @@ export const Login = () => {
       <PassInput
         onChangeText={(Text) => setUser({ ...user, pass: Text })}
         placeholder={"Senha"}
+        SecureTextEntry={true}
         style={{
           textAlign: "center",
           color: "white",

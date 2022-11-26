@@ -1,12 +1,10 @@
-import { Api } from "../../services";
-import { ItemCategory } from "../../components/ItemCategory/index.js";
+import { useNavigation } from "@react-navigation/native";
+import { useEffect, useState } from "react";
 import { FlatList } from "react-native";
 import { Header } from "../../components/Header/index.js";
+import { ItemCategory } from "../../components/ItemCategory/index.js";
 import { MainContainer } from "../../components/MainContainer/styles.js";
-import { PlusButton } from "../../components/PlusButton/index.js";
-import { useNavigation } from "@react-navigation/native";
-import { useState, useEffect } from "react";
-import { Gradient } from "../../components/Gradient/index.js";
+import { Api } from "../../services";
 
 
 export const Home = () => {
@@ -30,7 +28,9 @@ export const Home = () => {
   function goBack() {
     navigation.goBack();
   }
-
+  function goCategorias(){
+    navigation.navigate("Categorias");
+  }
 
 
   return (
@@ -44,6 +44,7 @@ export const Home = () => {
         renderItem={renderItem}
         numColumns={2}
       />
+     
     </MainContainer>
   );
 };

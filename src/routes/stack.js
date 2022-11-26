@@ -1,17 +1,17 @@
-import { CadastroUser } from "../screens/Login/CadastroUser/index.js";
-import { CreateAccount } from "../screens/CreateAccount/index.js"
+import { Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
-import { Cart } from "../screens/Cart/index"
-import { Categories } from "../screens/Categories/index.js";
+import { Cart } from "../screens/Cart/index";
+import { Categories } from "../screens/Categories/index";
 import { CategoryRegister } from "../screens/CategoryRegister/index.js";
+import { CreateAccount } from "../screens/CreateAccount/index.js";
 import { EditCategory } from "../screens/EditCategory/index.js";
 import { ForgotPass } from "../screens/ForgotPass/index";
 import { Home } from "../screens/Home/index";
-import { Ionicons } from "@expo/vector-icons";
 import { Login } from "../screens/Login/index.js";
 
 import React from "react";
+import Categorias from "../screens/Categorias";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -68,9 +68,11 @@ export function StackRoutes() {
       <Stack.Screen name="ForgotPass" component={ForgotPass} />
       <Stack.Screen name="CreateAccount" component={CreateAccount} />
       <Stack.Screen name="Categories" component={Categories} />
+      <Stack.Screen name="Categorias" component={Categorias} />
       <Stack.Screen name="CategoryRegister" component={CategoryRegister} />
       <Stack.Screen name="Home" component={TabRoutes} />
       <Stack.Screen name="EditCategory" component={EditCategory} />
+      
     </Stack.Navigator>
   );
 }
