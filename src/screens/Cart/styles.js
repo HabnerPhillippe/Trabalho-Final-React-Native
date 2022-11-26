@@ -1,8 +1,8 @@
 import styled from "styled-components/native";
 
 export const Container = styled.View`
-height: 100%;
-width: 100%;
+  height: 100%;
+  width: 100%;
 `;
 
 export const ButtonText = styled.Text`
@@ -12,7 +12,8 @@ export const ButtonText = styled.Text`
   font-size: 12px;
   font-style: normal;
   font-weight: 600px;
-  height: 19px;
+  height: 5px;
+  left:14px;
   letter-spacing: 0.05em;
   line-height: 24px;
   position: absolute;
@@ -21,12 +22,15 @@ export const ButtonText = styled.Text`
 `;
 
 export const BuyButton = styled.TouchableOpacity`
-  bottom: 50px;
   background: #2f1313;
   border: 1px solid #ff0000;
+  top: 8rem;
+  width: 8rem;
+  height: 2rem;
+  bottom: 50px;
+  background: #2f1313;
   border-radius: 3px;
   box-sizing: border-box;
-  height: 35px;
   opacity: 0.5;
   position: absolute;
   align-items: center;
@@ -50,32 +54,33 @@ export const TextBuy = styled.Text`
 `;
 
 export const RemoveItemButton = styled.TouchableOpacity`
-left:70%;
-`
+  left: 70%;
+  bottom: 105%;
+`;
 
 export const AddRemove = styled.View`
   flex-direction: row;
   space-between: middle;
-
-`
+`;
 
 export const Resume = styled.View`
-position:absolute;
-bottom:3rem;
-left:2rem
-`
+  position: absolute;
+  bottom: 3rem;
+  left: 2rem;
+`;
 
 export const ProductContainer = styled.View`
-top:1rem;
-padding-left: 1rem;
-border: 1px solid black;
-`
+  top: 1rem;
+  padding-left: 1rem;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+`;
 
 export const TrashButton = styled.TouchableOpacity`
-left:90%;
-`
+  left: 90%;
+`;
 
 export const NoItems = styled.Text`
-margin-left:20px;
-margin-top:10px;
-`
+  margin-left: 20px;
+  margin-top: 10px;
+`;

@@ -1,5 +1,5 @@
 import { Api } from "../../services/index.js";
-import { ButtonsContainer, Card, ComprarText, CustomButton, Name, Photo, TextContainer,ComprarButton } from "./styles";
+import { Card, ComprarText, Price, Name, Photo, TextContainer,ComprarButton } from "./styles";
 import colors from "../../themes/colors";
 import { IdContext } from "../../context/index.js";
 import { MaterialIcons, FontAwesome5 } from "@expo/vector-icons";
@@ -32,6 +32,7 @@ export const ItemCategory = ({ name,price,id,photo }) => {
       <Photo source={{ uri: photo }} />
       <TextContainer>
         <Name>{name}</Name>
+        <Price>R${price}</Price>
       </TextContainer>
       <ComprarButton onPress={() => addItem(name,price,id,photo)}>
         <ComprarText>COMPRAR</ComprarText>
