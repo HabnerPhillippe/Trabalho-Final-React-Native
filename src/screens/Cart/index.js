@@ -51,7 +51,7 @@ export const Cart = (props) => {
                 
                 <ProductContainer key={produto.id}>
                   <View>
-                    <Image source={produto.foto} />
+                    <Image source={productPhoto} />
                   </View>
                   <View>
                     <Text>{produto.nome}</Text>
@@ -81,9 +81,9 @@ export const Cart = (props) => {
           </View>
         </View>
         <Resume>
-              <Text>Preço total do pedido: </Text>
+              <Text>Preço total do pedido:</Text>
               <Text>R${total.toFixed(2)}</Text>
-          </Resume>
+        </Resume>
       <BuyButton onPress={() => endCart()}>
         <ButtonText>FINALIZAR</ButtonText>
       </BuyButton>

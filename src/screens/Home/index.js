@@ -35,7 +35,7 @@ export const Home = () => {
 
   return (
     <MainContainer>
-      <Header title={"Mais vendidos !"} iconName={"arrow-back"} goBack={goBack} />
+      <Header  title={"Mais vendidos !"} />
 
       
       <FlatList

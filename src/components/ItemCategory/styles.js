@@ -5,7 +5,7 @@ export const Card = styled.View`
   flex-direction: row;
   //background-color: ${colors.secondary};
   width: 180px;
-  height: 250px;
+  height: 210px;
   //border: 1px solid ${colors.tertiary};
   justify-content: space-between;
   align-items: center;
@@ -33,18 +33,17 @@ export const Name = styled.Text`
   font-size: 12px;
 `;
 
-export const ButtonsContainer = styled.View`
-    flex-direction: row;
-    position: absolute;
-    bottom: 44px;
-    right: 50px;
+export const Price = styled.Text`
+  color: ${colors.primary};
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color:red;
+  auto-align: center;
 `;
 
 export const CustomButton = styled.TouchableOpacity`
   margin: 0 10px 0;
-`;
-
-export const Valor = styled.Text`
 `;
 
 export const ComprarButton = styled.TouchableOpacity`
@@ -54,7 +53,7 @@ export const ComprarButton = styled.TouchableOpacity`
   border-radius: 3px;
   opacity: 0.5;
   position: absolute;
-  top: 8rem;
+  top: 9rem;
   width: 8rem;
   height: 2rem;
   align-self: center;
@@ -72,5 +71,4 @@ export const ComprarText = styled.Text`
   letter-spacing: 0.05em;
   line-height: 24px;
   position: absolute;
-  
 `;
