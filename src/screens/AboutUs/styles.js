@@ -16,14 +16,14 @@ export const ContainerAbout = styled.View`
 export const TextAbout = styled.Text`
   color: black;
   font-family: Lato;
-  font-size: 20px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 300px;
   allign-items: center;
 `;
 export const PhotoAbout = styled.Image`
   height: 100%;
-  width: 60px;
+  width: 65px;
   max-height: 200px;
   max-width: 300px;
 `;

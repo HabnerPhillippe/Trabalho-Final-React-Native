@@ -3,43 +3,54 @@ import colors from "../../themes/colors.js";
 
 export const Card = styled.View`
   flex-direction: row;
-  //background-color: ${colors.secondary};
-  width: 180px;
+  background-color: white;
+  width: 200px;
   height: 210px;
   //border: 1px solid ${colors.tertiary};
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 100px;
 `;
 
 export const Photo = styled.Image`
-  width: 130px;
-  height: 90px;
-  margin: 0px 0px 160px 30px;
-  border: 1px solid ${colors.primary};
+  width: 63%;
+  height: 83%;
+  margin-top: 10px;
+  margin-left: 30px;
 `;
 
 export const TextContainer = styled.View`
-  width: 130px;
+  width: 135px;
+  background-color: none;
+  max-width: 300px;
   position: absolute;
-  top: 90px;
-  right: 20px;
+  margin-top: 283px;
+  margin-left: 27px;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const Name = styled.Text`
   color: ${colors.primary};
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 15px;
+  align-items: right;
+  margim-top: 20px;
 `;
 
 export const Price = styled.Text`
   color: ${colors.primary};
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 12px;
-  color:red;
+  font-size: 16px;
+  color: red;
   auto-align: center;
+  margim-left: 30px;
+  margim-right: 50px;
+  align-items: center;
 `;
 
 export const CustomButton = styled.TouchableOpacity`
@@ -58,12 +69,14 @@ export const ComprarButton = styled.TouchableOpacity`
   height: 2rem;
   align-self: center;
   left: 30px;
+  margin-top: 127px;
+  margin-bottom: 100px;
 `;
 
 export const ComprarText = styled.Text`
   color: #fff;
   font-family: Sans-serif;
-  font-size: 10px;
+  font-size: 11px;
   font-style: normal;
   align-self: center;
   top: auto;

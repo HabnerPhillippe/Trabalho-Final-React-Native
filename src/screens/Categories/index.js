@@ -26,7 +26,7 @@ export const Categories = () => {
 
   function goBack() {
     navigation.goBack();
-  };
+  }
 
   return (
     <MainContainer>
