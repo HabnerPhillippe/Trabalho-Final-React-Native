@@ -19,12 +19,12 @@ export const Logo = styled.Image`
   top: 7px;
   width: 125px;
 `;
-  
+
 export const Title = styled.Text`
-  color: ${colors.primary};
+  color: white;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
 `;
 

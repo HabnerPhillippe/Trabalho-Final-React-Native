@@ -21,6 +21,12 @@ export const AboutUs = () => {
   return (
     <SafeAreaView>
       <Header title={"Sobre nós"} goBack={goBack} iconName={"arrow-back"} />
+      {"\n"}
+      {"\n"}
+      {"\n"}
+      {"\n"}
+      {"\n"}
+      {"\n"}
       <ImageBackground source={marca}>
         <View>
           {"\n"}
